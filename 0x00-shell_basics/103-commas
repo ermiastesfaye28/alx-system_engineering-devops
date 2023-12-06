@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -1 --format=comma
+ls -A -1 --format=comma | sed -e 's/^/ /' -e 's/$/ /' | tr -d '\n' | sed 's/, $/\n/'

@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | sed -E ':a;N;$!ba;s/\n/, /g; s/(.*), /\1\n/'
+ls -Ap1 | awk 'BEGIN {ORS=", "} {print $0} END {if (NR > 0) print ""}'

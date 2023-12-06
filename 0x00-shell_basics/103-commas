@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 | awk 'BEGIN {ORS=", "} {print $0} END {if (NR > 0) print ""}'
+ls -Ap1 | awk 'BEGIN {ORS=", "} {print $0} END {if (NR > 0) print "./, ../"}'
